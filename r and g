@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> site one piece </title>
+ </head>
+ 
+ <style>
+    body {
+         background-color:lightcyan;
+         color:chocolate;
+         font-family:Arial;
+    }
+    h1 {
+      color:Green;
+    }
+ </style>
+ <body>
+     <h1> ONE PIECE </h1>
+ 
+     <picture>
+      <source media="(max-width:750px)"
+      srcset="onepiece.p.png" type="image/png">
+     
+      <source media="(max-width:1050px)"
+      srcset="onepiece.m.png" type="image/png">
+     
+      <img src="onepiece.g.png alt="imagem flexivel">
+     
+       <h1> Audio </h1>
+       <audio src="Luffy.Canção em Skypie.mp3"
+       autoplay loop controls>
+       </audio>
+       <h2>
+         <video width="300px" controls src="Luffy.Canção em Skypiea.mp4" muted>
+         </video>
+        </h2>
+       
+     
+     
+     </picture>
+ </body>
+ </html>
