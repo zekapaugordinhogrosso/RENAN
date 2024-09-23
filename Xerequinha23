@@ -1,60 +1,166 @@
-const nomes = ["Fernanda", "Giuliana", "Maria Eduarda", "Marcelo", "Amanda","Gustavo", "Gabriel"];
+<!DOCTYPE html>
 
-export function aleatorio (lista){
-    const posicao = Math.floor(Math.random()* lista.length);
-    return lista[posicao];
-}
+<html lang="pt-BR">
 
-export const nome = aleatorio(nomes);
-import {aleatorio, nome} from './aleatorio.js';
-caixaPerguntas.textContent = `Em 2049, ${nome}`;
-function substituiNome(){
-    for(const pergunta of perguntas){
-        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Missão com Nomes Aleatórios</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background-color: #f4f4f4;
+
+      padding: 20px;
+
+      text-align: center;
+
     }
-}
-substituiNome();
-const nome = aleatorio(nomes);
-const nomes = ["Fernanda", "Giuliana", "Maria Eduarda", "Marcelo", "Amanda","Gustavo", "Gabriel"];
 
-export function aleatorio (lista){
-    const posicao = Math.floor(Math.random()* lista.length);
-    return lista[posicao];
-}
+    h1 {
 
-export const nome = aleatorio(nomes);
-import {aleatorio, nome} from './aleatorio.js';
-caixaPerguntas.textContent = "Em 2049, …";
-caixaPerguntas.textContent = `Em 2049, ${nome}`;
-function substituiNome(){
-    for(const pergunta of perguntas){
-        
+      color: #333;
+
     }
-}
-function substituiNome(){
-for(const pergunta of perguntas){
-pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+
+    p {
+
+      font-size: 18px;
+
+      color: #555;
+
     }
-}
-import { _________ } from './aleatorio.js'; 
-const bebidasBase = ["Café", "Chá", "Leite", "Suco de laranja"];
 
-function criaBebida() {
-  const bebida = aleatorio(___________);
+    button {
 
-console.log(`Bom dia! Sua bebida para o café da manhã é: ${__________}.`);
-}
+      padding: 10px 20px;
 
-criaBebida();
-const escola = "Alura Start";
+      font-size: 16px;
 
-console.log("Eu estudo na " + escola);
-const escola = "Alura Start";
+      background-color: #28a745;
 
-console.log(["Eu estudo na ", escola].join());
-const escola = "Alura Start";
+      color: white;
 
-console.log("Eu estudo na ".concat(escola));
-const escola = "Alura Start";
+      border: none;
 
-console.log(`Eu estudo na ${escola}`);
+      border-radius: 5px;
+
+      cursor: pointer;
+
+      margin-top: 20px;
+
+    }
+
+    button:hover {
+
+      background-color: #218838;
+
+    }
+
+    ul {
+
+      list-style-type: none;
+
+      padding: 0;
+
+    }
+
+    li {
+
+      padding: 5px;
+
+      font-size: 16px;
+
+      color: #333;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Missão Especial</h1>
+
+  <p>A missão deve ser cumprida por <span id="nome-alvo">[Nome Aleatório]</span>.</p>
+
+
+  <button id="trocar-nome">Trocar Nome Aleatório</button>
+
+
+  <h2>Lista de Nomes Disponíveis:</h2>
+
+  <ul id="lista-nomes">
+
+    <!-- A lista de nomes aleatórios será inserida aqui -->
+
+  </ul>
+
+
+  <!-- JavaScript -->
+
+  <script>
+
+    // Função que retorna um nome aleatório da lista
+
+    function aleatorio() {
+
+      const nomes = ["João", "Maria", "Lucas", "Ana", "Carlos", "Sofia", "José", "Laura", "Pedro", "Julia"];
+
+      const indiceAleatorio = Math.floor(Math.random() * nomes.length);
+
+      return nomes[indiceAleatorio];
+
+    }
+
+
+    // Função que atualiza o nome na missão
+
+    function atualizarNome() {
+
+      document.getElementById('nome-alvo').textContent = aleatorio();
+
+    }
+
+
+    // Atualiza o nome ao carregar a página pela primeira vez
+
+    atualizarNome();
+
+
+    // Adiciona um evento ao botão para trocar o nome ao ser clicado
+
+    document.getElementById('trocar-nome').addEventListener('click', atualizarNome);
+
+
+    // Gera a lista de nomes e exibe na página
+
+    const nomesLista = ["João", "Maria", "Lucas", "Ana", "Carlos", "Sofia", "José", "Laura", "Pedro", "Julia"];
+
+    const listaElement = document.getElementById('lista-nomes');
+
+
+    nomesLista.forEach(nome => {
+
+      const li = document.createElement('li');
+
+      li.textContent = nome;
+
+      listaElement.appendChild(li);
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
